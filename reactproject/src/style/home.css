@@ -1,0 +1,97 @@
+.title {
+   background-image: url(../assets/depositphotos_243120806-stock-photo-programmer-working-software-development-coding.jpg);
+   height: 100vh;
+   background-repeat: no-repeat;
+   background-size: cover; 
+   background-position: center;
+   display: flex; 
+   flex-direction: column; 
+   justify-content: center; 
+   align-items: center; 
+   color: white; 
+   text-align: center; 
+}
+.title::before {
+    content: "";
+    position: absolute;
+   
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); 
+    z-index: 1; 
+    pointer-events: none; 
+}
+
+.title h1, .title h2, .title button{
+    z-index: 2;
+}
+
+h1 {
+    font-size: 6vh;
+}
+
+h3 {
+    border-bottom: 3px solid #0d6efd ;
+    font-size: 3vh; 
+}
+p {
+    font-size: 2.5vh;
+}
+.custom-button {
+    background-color: blue; 
+    border-radius: 25px; 
+    color: white; 
+    padding: 10px 20px; 
+    border: none; 
+    margin-top: 20px; 
+}
+
+.encadre {
+    width: 100%;
+    height: 100%;
+    margin-top: 5vh;
+    padding: 1rem;
+    background-color: #FFF;
+    margin-bottom: 10vh;
+}
+
+.progress {
+    height: 1.5rem; 
+    margin-top: 1rem;
+}
+
+.progress-bar {
+    line-height: 1.5rem; 
+    font-size: 1rem; 
+    
+}
+
+
+
+
+@media (min-width: 1025px) {
+ 
+.encadre {
+    width: 80%;
+    height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5vh;
+    padding: 1rem;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+    border-radius: 1rem;
+    
+    box-sizing: border-box;
+    margin-bottom: 10vh;
+} }
+
+h3{
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+p {
+    margin-bottom: 2rem;
+}
