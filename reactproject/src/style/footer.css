@@ -43,7 +43,14 @@ h4 {
     margin-bottom: 5rem;
     
 }
-
+.scroll-top {
+    margin-left: 5rem;
+    color: #EEE;
+    background-color: #1e1e1e ;
+}
+.scroll-top:hover {
+    background-color: #298eff;
+}
 @media (min-width: 600px) {
     .all-list{
         

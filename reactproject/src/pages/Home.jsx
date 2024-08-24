@@ -9,8 +9,8 @@ function Home() {
       <Header />
 
       <section className="title">
-        <h1>Bonjour, je suis John Doe</h1>
-        <h2>Développeur web full stack</h2>
+      <h1 style={{ color: '#EEE' }}>Bonjour, je suis John Doe</h1>
+      <h2 style={{ color: '#EEE' }}>Développeur web full stack</h2>
         <button
           className="btn btn-primary custom-button"
           onClick={() =>

@@ -6,8 +6,9 @@ nav {
     color: #EEE;
 }
 .nav-link {
-    color: #EEE;
-}
+    color: #000000
+    !important;
+  }
 
 .navbar-toggler-icon {
     background-color: #0d6efd;
@@ -16,3 +17,13 @@ nav {
 .nav-item {
     margin-right: 3rem;
 }
+
+.nav-link.active {
+    
+    color: #0d6efd  !important; 
+  }
+
+  .nav-link:hover {
+    color: rgba(255, 255, 255, 0.8) !important; 
+    
+  }
