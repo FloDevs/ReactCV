@@ -18,23 +18,21 @@ function Header() {
             <div className="collapse navbar-collapse ms-5" id="navbarNav">
               <ul className="navbar-nav ms-auto ms-5">
                 <li className="nav-item">
-                  <NavLink className="nav-link" to="/" exact>Accueil</NavLink>
+                  <NavLink className="nav-link" to="/" >ACCUEIL</NavLink>
                 </li>
                 <li className="nav-item">
-                  <NavLink className="nav-link" to="/services">Services</NavLink>
+                  <NavLink className="nav-link" to="/services">SERVICES</NavLink>
                 </li>
                 <li className="nav-item">
-                  <NavLink className="nav-link" to="/réalisations">Réalisations</NavLink>
+                  <NavLink className="nav-link" to="/réalisations">REALISATIONS</NavLink>
                 </li>
                 <li className="nav-item">
-                  <NavLink className="nav-link" to="/blog">Blog</NavLink>
+                  <NavLink className="nav-link" to="/blog">BLOG</NavLink>
                 </li>
                 <li className="nav-item">
-                  <NavLink className="nav-link" to="/contact">Contact</NavLink>
+                  <NavLink className="nav-link" to="/contact">CONTACT</NavLink>
                 </li>
-                <li className="nav-item">
-                  <NavLink className="nav-link" to="/mentions">Mentions Légales</NavLink>
-                </li>
+                
               </ul>
             </div>
           </nav>
