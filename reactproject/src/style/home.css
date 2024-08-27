@@ -1,5 +1,5 @@
 .title {
-   background-image: url(../assets/depositphotos_243120806-stock-photo-programmer-working-software-development-coding.jpg);
+   background-image: url(../assets/hero-bg-mobile.jpg);
    height: 100vh;
    background-repeat: no-repeat;
    background-size: cover; 
@@ -25,11 +25,13 @@
     z-index: 2;
 }
 
-h1 {
+.name {
     font-size: 6vh;
 }
-
-h3 {
+.work {
+    font-size: 3vh ;
+}
+.about {
     border-bottom: 3px solid #0d6efd ;
     font-size: 3vh; 
 }
@@ -43,6 +45,11 @@ p {
     padding: 10px 20px; 
     border: none; 
     margin-top: 20px; 
+}
+
+.photo-profil {
+    width: 100%;
+    margin-top: 4vh;
 }
 
 .encadre {
@@ -65,7 +72,11 @@ p {
     
 }
 
-
+@media (min-width: 768px) and (max-width: 1024px) {
+    .title {
+    background-image: url(../assets/hero-bg-tablette.jpg);
+}
+}
 
 
 @media (min-width: 1025px) {
@@ -84,7 +95,10 @@ p {
     
     box-sizing: border-box;
     margin-bottom: 10vh;
-} }
+}
+.title {
+    background-image: url(../assets/hero-bg.jpg);
+}}
 
 h3{
     margin-top: 2rem;

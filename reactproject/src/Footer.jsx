@@ -4,7 +4,15 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import Twitter from "./assets/twitter.png";
 import Github from "./assets/signe-github.png";
 import Linkedin from "./assets/linkedin.png";
+
+import { useContext } from 'react';
+import { ArticleContext } from './Article';
+
+
+
 function Footer() {
+  const { articles } = useContext(ArticleContext);
+
   return (
     <>
       <footer className="footer">
@@ -77,21 +85,13 @@ function Footer() {
           <div className="footer-column">
             <h4>Mes derniers articles</h4>
             <ul className="nav-list">
-              <li>
-                <a href="#article1">
-                  <i className="fas fa-arrow-right me-2"></i>Article 1
-                </a>
-              </li>
-              <li>
-                <a href="#article2">
-                  <i className="fas fa-arrow-right me-2"></i>Article 2
-                </a>
-              </li>
-              <li>
-                <a href="#article3">
-                  <i className="fas fa-arrow-right me-2"></i>Article 3
-                </a>
-              </li>
+              {articles.slice(0, 3).map(article => (
+                <li  key={article.id}>
+                  <a className="nav-link" href={article.link}>
+                    <i className="fas fa-arrow-right me-2"></i>{article.title}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
@@ -101,6 +101,8 @@ function Footer() {
       </footer>
     </>
   );
+  
 }
+
 
 export default Footer;

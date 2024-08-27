@@ -1,0 +1,15 @@
+@media (min-width: 1025px) { 
+
+.container-fluid {
+   padding-left: 10vh;
+   padding-right: 10vh;
+  }}
+
+  .card .card-title {
+    font-size: 1.25rem; 
+    font-weight: bold;
+  }
+  
+  .card .card-text {
+    font-size: 1rem; 
+  }

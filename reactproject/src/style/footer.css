@@ -64,3 +64,7 @@ h4 {
         padding-right: 10rem;
     }
 }
+
+.article {
+    text-decoration: none;
+}
