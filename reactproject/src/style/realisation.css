@@ -1,0 +1,14 @@
+.techno {
+  font-size: 2vh;
+  margin: 0;
+}
+
+.techno-rectangle {
+  background-color: #eee;
+  padding: 1rem;
+  text-align: center;
+}
+
+.cadre {
+  text-align: center;
+}
