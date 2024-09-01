@@ -9,8 +9,12 @@ function Home() {
       <Header />
 
       <section className="title">
-      <h1 className = "name" style={{ color: '#EEE' }}>Bonjour, je suis John Doe</h1>
-      <h2 className = "work" style={{ color: '#EEE' }}>Développeur web full stack</h2>
+        <h1 className="name" style={{ color: "#EEE" }}>
+          Bonjour, je suis John Doe
+        </h1>
+        <h2 className="work" style={{ color: "#EEE" }}>
+          Développeur web full stack
+        </h2>
         <button
           className="btn btn-primary custom-button"
           onClick={() =>
@@ -26,8 +30,8 @@ function Home() {
       <section className="encadre">
         <div className="row">
           <div className="col-md-6 a-propos">
-            <h3 className="about" >À propos</h3>
-            
+            <h3 className="about">À propos</h3>
+
             <p>
               Passioné par l&apos;informatique et les nouvelles technologies,
               j&apos;ai suivi une formation{" "}

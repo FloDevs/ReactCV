@@ -1,0 +1,81 @@
+.cadre-service {
+  margin-left: 1vh;
+  margin-right: 1vh;
+  text-align: center;
+  background-color: white;
+  padding: 1vh;
+  margin-bottom: 2vh;
+  border-radius: 2vh;
+  border: 0.5px solid rgba(0, 0, 0, 0.1);
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+  flex: 1; /* S'assurer que chaque cadre-service prend la même largeur */
+  min-width: 0; /* Permet aux éléments de se réduire sans forcer la largeur */
+}
+
+.service {
+  background-color: #faf9f9;
+  display: flex;
+  flex-direction: column;
+  gap: 2vh; /* Ajoute un espace uniforme entre les éléments */
+}
+
+.icone {
+  height: 10vh;
+}
+
+.title-service {
+  font-size: 3vh;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+}
+
+.p-service {
+  font-size: 2vh;
+  padding-left: 1.5vh;
+  padding-right: 1.5vh;
+}
+
+/* Styles pour les tablettes */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .service {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding-top: 6vh;
+    padding-bottom: 6vh;
+  }
+
+  .cadre-service {
+    margin: 2vh;
+    padding: 1vh;
+    flex: 1 1 calc(33.333% - 4vh);
+    box-sizing: border-box;
+  }
+  .title-service {
+    font-size: 2vh;
+  }
+
+  .p-service {
+    font-size: 1.5vh;
+  }
+}
+
+/* Styles pour les écrans larges */
+@media (min-width: 1025px) {
+  .service {
+    flex-direction: row;
+    padding-bottom: 10vh;
+    padding-top: 10vh;
+    padding-left: 10vh;
+    padding-right: 10vh;
+  }
+
+  .title-service {
+    margin: 3vh;
+  }
+
+  .cadre-service {
+    flex: 1;
+    margin: 2vh;
+  }
+}

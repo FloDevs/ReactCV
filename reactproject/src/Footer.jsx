@@ -5,13 +5,33 @@ import Twitter from "./assets/twitter.png";
 import Github from "./assets/signe-github.png";
 import Linkedin from "./assets/linkedin.png";
 
-import { useContext } from 'react';
-import { ArticleContext } from './Article';
-
-
+import { useContext, useEffect, useState } from "react";
+import { ArticleContext } from "./Article";
+import { RealisationContext } from "./Portfolio";
 
 function Footer() {
+  const [showBackToTop, setShowBackToTop] = useState(false);
+  const responsive = window.innerWidth <= 768 ? 150 : 300;
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > responsive) {
+        setShowBackToTop(true);
+      } else {
+        setShowBackToTop(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Cleanup function
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []); // L'effet s'exécute uniquement lors du montage du composant
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
   const { articles } = useContext(ArticleContext);
+  const { realisations } = useContext(RealisationContext);
 
   return (
     <>
@@ -25,14 +45,33 @@ function Footer() {
               Téléphone : 06 20 30 40 50
             </address>
             <div className="social-icons">
-              <a href="#">
-                <img src={Twitter} />
+              <a
+                href="https://x.com/johndoefromx"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src={Twitter}
+                  alt="Logo de Twitter qui represente un oiseau blanc sur fond bleu "
+                />
               </a>
-              <a href="#">
-                <img src={Github} alt="Twitter" />
+              <a href="#" target="_blank" rel="noopener noreferrer">
+                <NavLink to="/github">
+                  <img
+                    src={Github}
+                    alt="Logo de Github qui represente un chat blanc sur fond noir"
+                  />
+                </NavLink>
               </a>
-              <a href="#">
-                <img src={Linkedin} alt="LinkedIn" />
+              <a
+                href="https://www.linkedin.com/in/john-doe-94a6941a1/?originalSubdomain=fr"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src={Linkedin}
+                  alt="Logo de LinkedIn qui represente un I et un N blanc sur fond bleu "
+                />
               </a>
             </div>
           </div>
@@ -65,30 +104,24 @@ function Footer() {
           <div className="footer-column">
             <h4>Mes dernières réalisations</h4>
             <ul className="nav-list">
-              <li>
-                <a href="#realisation1">
-                  <i className="fas fa-arrow-right me-2"></i>Réalisation 1
-                </a>
-              </li>
-              <li>
-                <a href="#realisation2">
-                  <i className="fas fa-arrow-right me-2"></i>Réalisation 2
-                </a>
-              </li>
-              <li>
-                <a href="#realisation3">
-                  <i className="fas fa-arrow-right me-2"></i>Réalisation 3
-                </a>
-              </li>
+              {realisations.slice(0, 3).map((realisation) => (
+                <li key={realisation.id}>
+                  <a className="nav-link" href={realisation.link}>
+                    <i className="fas fa-arrow-right me-2"></i>
+                    {realisation.title}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
           <div className="footer-column">
             <h4>Mes derniers articles</h4>
             <ul className="nav-list">
-              {articles.slice(0, 3).map(article => (
-                <li  key={article.id}>
+              {articles.slice(0, 3).map((article) => (
+                <li key={article.id}>
                   <a className="nav-link" href={article.link}>
-                    <i className="fas fa-arrow-right me-2"></i>{article.title}
+                    <i className="fas fa-arrow-right me-2"></i>
+                    {article.title}
                   </a>
                 </li>
               ))}
@@ -97,12 +130,19 @@ function Footer() {
         </div>
         <div className="copyright">
           <small>© Designed by John Doe</small>
+          {showBackToTop && (
+            <button
+              className="scroll-top"
+              onClick={scrollToTop}
+              title="Remonter en haut"
+            >
+              ↑
+            </button>
+          )}
         </div>
       </footer>
     </>
   );
-  
 }
-
 
 export default Footer;

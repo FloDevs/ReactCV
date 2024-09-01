@@ -1,0 +1,51 @@
+.mention {
+  background-color: #faf9f9;
+  padding-bottom: 5vh;
+}
+
+.content {
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-link {
+  text-decoration: none;
+}
+
+.blue-mention {
+  color: #0d6efd;
+}
+
+.blue-back {
+  background-color: #bae1f5;
+}
+
+.logo {
+  height: 2vh;
+}
+
+.mail {
+  height: 2vh;
+  margin-right: 0.5vh;
+}
+
+.lien-mentions {
+  text-decoration: none;
+  color: #0d6efd;
+}
+
+.city {
+  color: black;
+}
+
+.site {
+  text-decoration: none;
+  color: #0d6efd;
+}
+
+.credit-mentions {
+  font-size: 1.5vh;
+  line-height: 2.5;
+  margin-left: 1vh;
+}

@@ -1,52 +1,50 @@
-import {createBrowserRouter, RouterProvider} from "react-router-dom" ;
-import './App.css'
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import "./App.css";
 import Home from "./pages/Home";
 import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
 import Mentions from "./pages/Mentions";
 import Realisation from "./pages/Realisations";
 import Services from "./pages/Services";
-
+import Github from "./Github";
 
 const router = createBrowserRouter([
   {
-    path: '/',
-    element:<Home/>
+    path: "/",
+    element: <Home />,
   },
   {
-    path: '/services',
-    element:<Services/>
+    path: "/services",
+    element: <Services />,
   },
   {
-    path: '/réalisations',
-    element:<Realisation/>
+    path: "/réalisations",
+    element: <Realisation />,
   },
   {
-    path: '/blog',
-    element:<Blog/>
+    path: "/blog",
+    element: <Blog />,
   },
   {
-    path: '/contact',
-    element:<Contact/>
+    path: "/contact",
+    element: <Contact />,
   },
   {
-    path: '/mentions',
-    element:<Mentions/>
-  }])
-  
-
-
-  
+    path: "/mentions",
+    element: <Mentions />,
+  },
+  {
+    path: "/github",
+    element: <Github />,
+  },
+]);
 
 function App() {
-  
-
   return (
     <>
-     <RouterProvider router={router}/>
-     
+      <RouterProvider router={router} />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
